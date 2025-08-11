@@ -1,6 +1,6 @@
 # 📚 EbookTools
 
-![GitHub](https://img.shields.io/badge/license-MIT-blue.svg)![GitHub stars](https://img.shields.io/github/stars/Roxo7777/EbookTools)![GitHub issues](https://img.shields.io/github/issues/Roxo7777/EbookTools)![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)![HTML5](https://img.shields.io/badge/HTML-5-orange)![CSS3](https://img.shields.io/badge/CSS-3-blue)
+![GitHub](https://img.shields.io/badge/license-MIT-blue.svg) ![GitHub stars](https://img.shields.io/github/stars/Roxo7777/EbookTools) ![GitHub issues](https://img.shields.io/github/issues/Roxo7777/EbookTools) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow) ![HTML5](https://img.shields.io/badge/HTML-5-orange) ![CSS3](https://img.shields.io/badge/CSS-3-blue)
 
 Bem-vindo ao **EbookTools**, sua suíte de ferramentas de código aberto para gerenciar, editar e aprimorar ebooks diretamente no navegador! 🚀 Inspirado na praticidade e estilo moderno do Discord, este projeto oferece uma interface intuitiva e personalizável para amantes de ebooks. Todas as operações são realizadas localmente no seu navegador, garantindo privacidade e segurança.
 
