@@ -1,0 +1,32 @@
+/* --- Converter --- */
+.conversion-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    text-align: left;
+}
+
+.conversion-options-grid div {
+    display: flex;
+    align-items: center;
+}
+
+.conversion-options-grid label {
+    margin-left: 8px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.conversion-log {
+    background-color: var(--input-background);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    height: 200px;
+    overflow-y: auto;
+    text-align: left;
+    font-family: monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+}

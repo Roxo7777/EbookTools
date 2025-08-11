@@ -1,0 +1,6 @@
+/* --- Cover Changer --- */
+.cover-preview {
+    max-width: 150px;
+    margin-top: 15px;
+    border-radius: 5px;
+}

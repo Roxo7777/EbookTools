@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Mirrored from ebooktools.firebaseapp.com/tools/toc-editor.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Aug 2025 21:36:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EbookTools - Editor de Sumário</title>
+    <link rel="manifest" href="../manifest.json">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/tools/toc-editor.css">
+</head>
+<body>
+    <div class="app-layout">
+        <nav class="sidebar">
+            <header class="sidebar-header">
+                <h1>EbookTools</h1>
+                <p>Ferramentas para Ebook.</p>
+            </header>
+            
+            <div class="theme-switcher">
+                <label for="theme-select">Tema:</label>
+                <select id="theme-select">
+                    <option value="default">Discord</option>
+                    <option value="coffee">Café</option>
+                    <option value="purple">Roxo</option>
+                    <option value="white">Branco</option>
+                    <option value="red">Vermelho</option>
+                    <option value="green">Verde</option>
+                    <option value="amoled">Amoled</option>
+                </select>
+            </div>
+
+            <ul class="tool-list">
+                <li><a href="home.html" class="tab-button">Início</a></li>
+                <li><a href="resizer.html" class="tab-button">Redimensionar Capa</a></li>
+                <li><a href="changer.html" class="tab-button">Mudar Capa</a></li>
+                <li><a href="translator.html" class="tab-button">Traduzir Ebook</a></li>
+                <li><a href="converter.html" class="tab-button">Converter Ebook</a></li>
+                <li><a href="inspector.html" class="tab-button">Inspecionar Ebook</a></li>
+                <li><a href="clippings.html" class="tab-button">Minhas Anotações</a></li>
+                <li><a href="toc-editor.html" class="tab-button active">Editar Sumário</a></li>
+                <li><a href="history.html" class="tab-button">Histórico</a></li>
+            </ul>
+        </nav>
+
+        <main class="content-area" id="main-content">
+            <h2>Editor de Sumário</h2>
+            <p>Carregue um EPUB para ver, editar e reorganizar o seu sumário.</p>
+            <div id="toc-drop-area" class="upload-area">
+                <input type="file" id="epubInputToc" accept=".epub">
+                <p><span class="desktop-only">Arraste seu <strong>EPUB</strong> aqui</span><span class="mobile-only">Clique para selecionar seu <strong>EPUB</strong></span></p>
+                <span class="file-name" id="epub-file-name-toc"></span>
+            </div>
+
+            <div id="toc-editor-container" style="display: none;">
+                <h3>Sumário Atual</h3>
+                <ul id="toc-list" class="toc-list"></ul>
+                <div class="tool-actions">
+                    <button id="save-toc-btn" class="button">Salvar Alterações e Baixar EPUB</button>
+                </div>
+            </div>
+
+            <div id="status-toc" class="status"></div>
+        </main>
+    </div>
+
+    <script src="../scripts.js"></script>
+    <div id="debug-console-container"></div>
+</body>
+
+<!-- Mirrored from ebooktools.firebaseapp.com/tools/toc-editor.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Aug 2025 21:36:48 GMT -->
+</html>

@@ -1,0 +1,19 @@
+.api-key-group {
+    margin-top: 15px;
+}
+
+.api-key-group input {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.api-key-group small {
+    font-size: 0.85em;
+    color: var(--text-color-secondary);
+}
+
+
+.language-selectors {
+    display: flex;
+    gap: 20px;
+}

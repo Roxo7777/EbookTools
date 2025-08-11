@@ -1,0 +1,54 @@
+.toc-list {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--background-color);
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.toc-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: grab;
+}
+
+.toc-item:last-child {
+    border-bottom: none;
+}
+
+.toc-item.dragging {
+    opacity: 0.5;
+    background: var(--primary-hover-color);
+}
+
+.toc-item-handle {
+    margin-right: 15px;
+    color: var(--text-color-secondary);
+}
+
+.toc-item-label {
+    flex-grow: 1;
+}
+
+.toc-item-label input {
+    width: 100%;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+.toc-item-label input:hover, .toc-item-label input:focus {
+    background-color: var(--input-bg-color);
+    border-color: var(--border-color);
+}
+
+.tool-actions {
+    margin-top: 20px;
+    text-align: right;
+}

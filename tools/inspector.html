@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Mirrored from ebooktools.firebaseapp.com/tools/inspector.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Aug 2025 21:36:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EbookTools - Inspecionar Ebook</title>
+    <link rel="manifest" href="../manifest.json">
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/tools/inspector.css">
+</head>
+<body>
+    <canvas id="background-canvas"></canvas>
+    <div class="app-layout">
+        <nav class="sidebar">
+            <header class="sidebar-header">
+                <h1>EbookTools</h1>
+                <p>Ferramentas para Ebook.</p>
+            </header>
+            
+            <div class="theme-switcher">
+                <label for="theme-select">Tema:</label>
+                <select id="theme-select">
+                    <option value="default">Discord</option>
+                    <option value="coffee">Café</option>
+                    <option value="purple">Roxo</option>
+                    <option value="white">Branco</option>
+                    <option value="red">Vermelho</option>
+                    <option value="green">Verde</option>
+                    <option value="amoled">Amoled</option>
+                </select>
+            </div>
+
+            <ul class="tool-list">
+                <li><a href="home.html" class="tab-button">Início</a></li>
+                <li><a href="resizer.html" class="tab-button">Redimensionar Capa</a></li>
+                <li><a href="changer.html" class="tab-button">Mudar Capa</a></li>
+                <li><a href="translator.html" class="tab-button">Traduzir Ebook</a></li>
+                <li><a href="converter.html" class="tab-button">Converter Ebook</a></li>
+                <li><a href="inspector.html" class="tab-button active">Inspecionar Ebook</a></li>
+                <li><a href="clippings.html" class="tab-button">Minhas Anotações</a></li>
+                <li><a href="toc-editor.html" class="tab-button">Editar Sumário</a></li>
+                <li><a href="history.html" class="tab-button">Histórico</a></li>
+            </ul>
+        </nav>
+
+        <main class="content-area" id="main-content">
+            <div id="epub-drop-area-inspector" class="upload-area">
+                <input type="file" id="epubInputInspector" accept=".epub">
+                <p><span class="desktop-only">Arraste seu <strong>EPUB</strong> aqui para ver seus arquivos internos</span><span class="mobile-only">Clique para selecionar seu <strong>EPUB</strong></span></p>
+                <span class="file-name" id="epub-file-name-inspector"></span>
+            </div>
+            <div id="inspector-results" style="display: none;">
+                <button id="extract-all-btn" class="button" style="width: auto; padding: 10px 20px; margin-bottom: 15px;">Extrair Tudo como ZIP</button>
+                <div id="validation-results" style="margin-bottom: 15px;"></div>
+                <div class="inspector-layout">
+                    <div id="file-tree" class="file-tree-container"></div>
+                    <div id="file-preview" class="file-preview-container">
+                        <div id="image-view-wrapper" style="display: none;">
+                            <img id="image-view" alt="Pré-visualização da Imagem">
+                            <div id="image-metadata" class="image-info"></div>
+                            <a id="download-image-btn" class="button download-button" style="width: auto; padding: 10px 20px; margin-top: 10px; display: none;">Baixar Imagem</a>
+                        </div>
+                        <div id="code-view-wrapper" style="display: none;">
+                            <div class="code-toolbar">
+                                <div id="code-search-bar">
+                                    <input type="text" id="search-input" placeholder="Buscar no arquivo...">
+                                    <button id="search-prev-btn">&lt;</button>
+                                    <button id="search-next-btn">&gt;</button>
+                                    <span id="search-results-count"></span>
+                                </div>
+                                <button id="format-code-btn" class="button secondary">Formatar Código</button>
+                            </div>
+                            <pre><code id="code-view" class="language-markup"></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../scripts.js"></script>
+    <div id="debug-console-container"></div>
+</body>
+
+<!-- Mirrored from ebooktools.firebaseapp.com/tools/inspector.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Aug 2025 21:36:47 GMT -->
+</html>

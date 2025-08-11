@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Mirrored from ebooktools.firebaseapp.com/tools/changer.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Aug 2025 21:36:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EbookTools - Mudar Capa</title>
+    <link rel="manifest" href="../manifest.json">
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/tools/changer.css">
+</head>
+<body>
+    <div class="app-layout">
+        <nav class="sidebar">
+            <header class="sidebar-header">
+                <h1>EbookTools</h1>
+                <p>Ferramentas para Ebook.</p>
+            </header>
+            
+            <div class="theme-switcher">
+                <label for="theme-select">Tema:</label>
+                <select id="theme-select">
+                    <option value="default">Discord</option>
+                    <option value="coffee">Café</option>
+                    <option value="purple">Roxo</option>
+                    <option value="white">Branco</option>
+                    <option value="red">Vermelho</option>
+                    <option value="green">Verde</option>
+                    <option value="amoled">Amoled</option>
+                </select>
+            </div>
+
+            <ul class="tool-list">
+                <li><a href="home.html" class="tab-button">Início</a></li>
+                <li><a href="resizer.html" class="tab-button">Redimensionar Capa</a></li>
+                <li><a href="changer.html" class="tab-button active">Mudar Capa</a></li>
+                <li><a href="translator.html" class="tab-button">Traduzir Ebook</a></li>
+                <li><a href="converter.html" class="tab-button">Converter Ebook</a></li>
+                <li><a href="inspector.html" class="tab-button">Inspecionar Ebook</a></li>
+                <li><a href="clippings.html" class="tab-button">Minhas Anotações</a></li>
+                <li><a href="toc-editor.html" class_name="tab-button">Editar Sumário</a></li>
+                <li><a href="history.html" class="tab-button">Histórico</a></li>
+            </ul>
+        </nav>
+
+        <main class="content-area" id="main-content">
+            <div id="epub-drop-area-cover" class="upload-area">
+                <input type="file" id="epubInputCover" accept=".epub" multiple>
+                <p><span class="desktop-only">Arraste seu(s) <strong>EPUB(s)</strong> aqui ou clique para selecionar</span><span class="mobile-only">Clique para selecionar seu(s) <strong>EPUB(s)</strong></span></p>
+                <span class="file-name" id="epub-file-name-cover"></span>
+            </div>
+            <div id="changer-preview-window" class="preview-window"></div>
+            <div id="cover-drop-area" class="upload-area">
+                <input type="file" id="coverInput" accept="image/*">
+                <p><span class="desktop-only">Arraste sua <strong>nova capa</strong> aqui ou clique para selecionar</span><span class="mobile-only">Clique para selecionar sua <strong>nova capa</strong></span></p>
+                <span class="file-name" id="cover-file-name"></span>
+                <img id="cover-preview" class="cover-preview" alt="Pré-visualização da Capa" style="display:none;">
+            </div>
+            <div class="button-group">
+                <button id="generate-cover-btn" class="button secondary">Gerar Capa Simples</button>
+                <button id="extract-cover-btn" class="button secondary" disabled>Extrair Capa Atual</button>
+            </div>
+            <div class="form-group">
+                <label for="device-profile">Otimizar capa para o dispositivo (opcional):</label>
+                <select id="device-profile">
+                    <option value="original">Manter tamanho original</option>
+                    <option value="kindle_paperwhite">Kindle Paperwhite (1072x1448)</option>
+                    <option value="kindle_basic">Kindle (básico) (1030x1384)</option>
+                    <option value="kobo_libra">Kobo Libra 2 / Sage (1264x1680)</option>
+                    <option value="generic_hd">E-reader HD Genérico (1080x1440)</option>
+                    <option value="default_dimension">Padrão (814x1086)</option>
+                </select>
+            </div>
+            <button id="changeCoverBtn" class="button" disabled>Mudar Capa(s)</button>
+            <div id="status-cover" class="status"></div>
+        </main>
+    </div>
+
+    <script src="../scripts.js"></script>
+    <div id="debug-console-container"></div>
+</body>
+
+<!-- Mirrored from ebooktools.firebaseapp.com/tools/changer.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Aug 2025 21:36:45 GMT -->
+</html>

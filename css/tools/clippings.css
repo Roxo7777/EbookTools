@@ -1,0 +1,120 @@
+/* --- My Clippings --- */
+.clippings-book-group {
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+.clippings-book-group h3 {
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--header-text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sync-buttons a {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--primary-hover-color);
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.clipping-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.clipping-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.clipping-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+.clipping-item .metadata {
+    font-size: 0.85em;
+    color: #96989d;
+}
+
+.tool-actions {
+    margin-top: 15px;
+    text-align: right;
+}
+
+/* --- Image Generator Modal --- */
+.image-generator-layout {
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
+}
+
+.image-generator-controls {
+    width: 280px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-generator-controls .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-generator-controls label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color-secondary);
+}
+
+.image-generator-controls select,
+.image-generator-controls input[type="color"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+}
+
+.image-generator-controls input[type="color"] {
+    padding: 0;
+    height: 40px;
+}
+
+.image-generator-controls .button {
+    margin-top: auto;
+}
+
+.image-generator-preview {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color-darker);
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 300px;
+}
+
+#image-gen-canvas {
+    max-width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}

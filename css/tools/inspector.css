@@ -1,0 +1,103 @@
+/* --- Inspector --- */
+.inspector-layout {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.file-tree-container {
+    width: 300px;
+    height: 500px;
+    overflow: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--background-color);
+}
+
+.file-preview-container {
+    flex-grow: 1;
+    height: 500px;
+    overflow: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+#image-view-wrapper, #code-view-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#image-view {
+    max-width: 100%;
+    max-height: calc(100% - 50px);
+    display: block;
+    margin: 0 auto;
+}
+
+.tree-folder, .tree-file {
+    cursor: pointer;
+    padding: 4px;
+}
+
+.tree-folder > .folder-name::before {
+    content: '▶ ';
+    font-size: 0.8em;
+}
+
+.tree-folder.open > .folder-name::before {
+    content: '▼ ';
+}
+
+.tree-contents {
+    padding-left: 20px;
+    display: none;
+}
+
+.tree-folder.open > .tree-contents {
+    display: block;
+}
+
+.download-icon {
+    float: right;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.code-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: var(--secondary-hover-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+#code-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#code-search-bar input {
+    padding: 5px 8px;
+}
+
+#code-search-bar button {
+    padding: 5px 10px;
+}
+
+.image-info {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.highlight {
+    background-color: yellow;
+    color: black;
+}

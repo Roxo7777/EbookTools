@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Mirrored from ebooktools.firebaseapp.com/tools/resizer.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Aug 2025 21:36:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EbookTools - Redimensionar Capa</title>
+    <link rel="manifest" href="../manifest.json">
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../css/tools/resizer.css">
+</head>
+<body>
+    <div class="app-layout">
+        <nav class="sidebar">
+            <header class="sidebar-header">
+                <h1>EbookTools</h1>
+                <p>Ferramentas para Ebook.</p>
+            </header>
+            
+            <div class="theme-switcher">
+                <label for="theme-select">Tema:</label>
+                <select id="theme-select">
+                    <option value="default">Discord</option>
+                    <option value="coffee">Café</option>
+                    <option value="purple">Roxo</option>
+                    <option value="white">Branco</option>
+                    <option value="red">Vermelho</option>
+                    <option value="green">Verde</option>
+                    <option value="amoled">Amoled</option>
+                </select>
+            </div>
+
+            <ul class="tool-list">
+                <li><a href="home.html" class="tab-button">Início</a></li>
+                <li><a href="resizer.html" class="tab-button active">Redimensionar Capa</a></li>
+                <li><a href="changer.html" class="tab-button">Mudar Capa</a></li>
+                <li><a href="translator.html" class="tab-button">Traduzir Ebook</a></li>
+                <li><a href="converter.html" class="tab-button">Converter Ebook</a></li>
+                <li><a href="inspector.html" class="tab-button">Inspecionar Ebook</a></li>
+                <li><a href="clippings.html" class="tab-button">Minhas Anotações</a></li>
+                <li><a href="toc-editor.html" class="tab-button">Editar Sumário</a></li>
+                <li><a href="history.html" class_name="tab-button">Histórico</a></li>
+            </ul>
+        </nav>
+
+        <main class="content-area" id="main-content">
+            <p>Esta ferramenta redimensiona a capa existente de um ou mais arquivos EPUB (máximo de 100).</p>
+            <div id="epub-drop-area-resizer" class="upload-area">
+                <input type="file" id="epubInputResizer" accept=".epub" multiple>
+                <p><span class="desktop-only">Arraste até 100 <strong>EPUBs</strong> aqui ou clique para selecionar</span><span class="mobile-only">Clique para selecionar até 100 <strong>EPUBs</strong></span></p>
+                <span class="file-name" id="epub-file-name-resizer"></span>
+            </div>
+            <div class="preview-container">
+                <div id="resizer-preview-window" class="preview-window"></div>
+                <div class="preview-actions">
+                    <button id="add-more-epubs" class="button secondary">+</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="device-profile-resizer">Otimizar capa para o dispositivo:</label>
+                <select id="device-profile-resizer">
+                    <option value="default_dimension">Padrão (814x1086)</option>
+                    <option value="kindle_paperwhite">Kindle Paperwhite (1072x1448)</option>
+                    <option value="kindle_basic">Kindle (básico) (1030x1384)</option>
+                    <option value="kobo_libra">Kobo Libra 2 / Sage (1264x1680)</option>
+                    <option value="generic_hd">E-reader HD Genérico (1080x1440)</option>
+                </select>
+            </div>
+            <div class="form-group" style="text-align: center;">
+                <input type="checkbox" id="fetch-metadata" checked>
+                <label for="fetch-metadata">Buscar e corrigir metadados (título, autor, etc.)</label>
+            </div>
+            <div id="filename-format-group" class="form-group">
+                <label for="filename-format">Formato do nome do arquivo de saída:</label>
+                <select id="filename-format">
+                    <option value="{title}, {author}">{Título}, {Autor}</option>
+                    <option value="{author} - {title}">{Autor} - {Título}</option>
+                    <option value="{title}">{Título}</option>
+                    <option value="original">Manter nome original</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button id="edit-all-meta-btn" class="button secondary" disabled>Editar Metadados de Todos</button>
+                <button id="resizeCoverBtn" class="button" disabled>Redimensionar Capas</button>
+            </div>
+            <div id="status-resizer" class="status"></div>
+    </main>
+</div>
+
+<!-- Ebook Preview Modal -->
+<div id="ebook-preview-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content" style="width: 80%; max-width: 900px;">
+        <header class="modal-header">
+            <h2 id="preview-title">Pré-visualização do Ebook</h2>
+            <button id="preview-close-btn" class="modal-close-btn">&times;</button>
+        </header>
+        <div class="modal-body" id="preview-content-area">
+            <!-- O conteúdo do capítulo será inserido aqui -->
+        </div>
+        <footer class="modal-footer">
+            <button id="preview-prev-btn" class="button secondary">Anterior</button>
+            <span id="preview-page-indicator"></span>
+            <button id="preview-next-btn" class="button secondary">Próximo</button>
+        </footer>
+    </div>
+</div>
+
+<script src="../scripts.js"></script>
+<div id="debug-console-container"></div>
+</body>
+
+<!-- Mirrored from ebooktools.firebaseapp.com/tools/resizer.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Aug 2025 21:36:44 GMT -->
+</html>

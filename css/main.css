@@ -1,0 +1,82 @@
+@import url('./base.css');
+@import url('./layout.css');
+@import url('./components.css');
+
+#debug-console-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 500px;
+    height: 300px;
+    min-width: 200px;
+    min-height: 150px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    resize: both;
+    overflow: hidden; /* Contains the resizing handle */
+}
+
+#debug-header {
+    padding: 8px 12px;
+    cursor: grab;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+#debug-header:active {
+    cursor: grabbing;
+}
+
+.debug-buttons button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 8px;
+    padding: 2px 5px;
+}
+
+#debug-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 0.9em;
+    white-space: pre-wrap;
+}
+
+.resizer {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+
+#resizer-br {
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+}
+
+/* Responsive Debug Console */
+@media (max-width: 768px) {
+    #debug-console-container {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 30vh; /* 30% of viewport height */
+        max-height: 60vh;
+        border-radius: 15px 15px 0 0;
+        resize: vertical; /* Allow vertical resize only */
+    }
+}
+
