@@ -1,8 +1,22 @@
 # 📚 EbookTools
 
-![GitHub](https://img.shields.io/badge/license-MIT-blue.svg) ![GitHub stars](https://img.shields.io/github/stars/Roxo7777/EbookTools) ![GitHub issues](https://img.shields.io/github/issues/Roxo7777/EbookTools) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow) ![HTML5](https://img.shields.io/badge/HTML-5-orange) ![CSS3](https://img.shields.io/badge/CSS-3-blue)
+![GitHub](https://img.shields.io/badge/license-MIT-blue.svg)
+![GitHub stars](https://img.shields.io/github/stars/Roxo7777/EbookTools)
+![Website](https://img.shields.io/badge/EbookTools-Site-4BC422?logo=google-chrome&logoColor=white&labelColor=24292f&style=flat)
+![GitHub issues](https://img.shields.io/github/issues/Roxo7777/EbookTools)
 
-Bem-vindo ao **EbookTools**, sua suíte de ferramentas de código aberto para gerenciar, editar e aprimorar ebooks diretamente no navegador! 🚀 Inspirado na praticidade e estilo moderno do Discord, este projeto oferece uma interface intuitiva e personalizável para amantes de ebooks. Todas as operações são realizadas localmente no seu navegador, garantindo privacidade e segurança.
+Bem-vindo ao **EbookTools**, sua suíte de ferramentas de código aberto para gerenciar, editar e aprimorar ebooks diretamente no navegador! 🚀 Inspirado na praticidade e estilo moderno do Discord, você pode trabalhar com ebooks de forma simples, rápida e gratuita.
+
+---
+
+## 🌐 Site Oficial
+
+Acesse e utilize o EbookTools diretamente online, sem precisar instalar nada:
+
+- [ebooktools.web.app](https://ebooktools.web.app)
+- [ebooktools.firebaseapp.com](https://ebooktools.firebaseapp.com)
+
+O site possui sempre a versão mais recente das ferramentas, pronto para uso em qualquer dispositivo.
 
 ---
 
@@ -27,6 +41,7 @@ Bem-vindo ao **EbookTools**, sua suíte de ferramentas de código aberto para ge
 1. **Acesse o Site**:
 
    - Abra `index.html` em um navegador moderno (Chrome, Firefox, Edge).
+   - Ou acesse diretamente pelo [site oficial](https://ebooktools.web.app).
    - Você será redirecionado automaticamente para a página inicial (`home.html`).
 
 2. **Navegue pelas Ferramentas**:
