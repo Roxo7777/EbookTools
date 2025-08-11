@@ -1,9 +1,9 @@
 # 📚 EbookTools
 
 ![GitHub](https://img.shields.io/badge/license-MIT-blue.svg)
-![GitHub stars](https://img.shields.io/github/stars/Roxo7777/EbookTools)
 ![Website](https://img.shields.io/badge/EbookTools-Site-4BC422?logo=google-chrome&logoColor=white&labelColor=24292f&style=flat)
 ![GitHub issues](https://img.shields.io/github/issues/Roxo7777/EbookTools)
+![GitHub stars](https://img.shields.io/github/stars/Roxo7777/EbookTools)
 
 Bem-vindo ao **EbookTools**, sua suíte de ferramentas de código aberto para gerenciar, editar e aprimorar ebooks diretamente no navegador! 🚀 Inspirado na praticidade e estilo moderno do Discord, você pode trabalhar com ebooks de forma simples, rápida e gratuita.
 
